@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         "inter": ["Inter", "sans-serif"],
         "lexend": ["Lexend", "sans-serif"],
+        "raleway": ["Raleway", "sans-serif"],
       },
     },
   },

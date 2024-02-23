@@ -75,7 +75,7 @@ export const AboutUs = ({ scrollref }) => {
       className=" p-[30px] py-[60px] xl:px-[6%] xl:py-[4%] "
     >
        <animated.div
-          className="text-black text-center xl:text-6xl text-3xl font-bold xl:leading-[150px] leading-[50px]"
+          className="text-black text-center font-raleway xl:text-6xl text-3xl font-bold xl:leading-[150px] leading-[50px]"
           style={fadeTitle}
         >
           Welcome to My Portfolio!
@@ -114,7 +114,7 @@ export const AboutUs = ({ scrollref }) => {
 
   <animated.div
     style={fadeDes}
-    className="text-black text-lg font-normal leading-[30px] xl:leading-10 flex flex-col gap-5"
+    className="text-black text-lg font-raleway font-normal leading-[30px] xl:leading-10 flex flex-col gap-5"
   >
     <span className="md:text-2xl">I'm Chamaththa Shamod,</span> a passionate and driven software engineering intern with a keen interest in crafting innovative solutions to real-world problems. Throughout my academic journey and hands-on experiences, I've honed my skills in [list specific languages, tools, and technologies you're proficient in].
     {" "}

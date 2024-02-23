@@ -65,17 +65,24 @@ export const Header = ({ scrollRefs }) => {
 
 
   return (
-    <animated.section ref={ref}  className=' fixed top-0 md:relative w-full z-50 h-auto bg-black font-press-start flex items-center justify-between xl:justify-start p-0 xl:py-[5px] xl:px-[40px]'>
+    <animated.section ref={ref}  className=' fixed top-0 md:relative w-full  h-auto bg-white font-press-start flex flex-row items-center justify-between xl:justify-between p-0 xl:py-[5px] xl:px-[40px]'>
       <Link className='xl:w-[35%]' to="/">
-        <animated.img style={fadeNavigation} src={logo} className=' w-[95px] h-[70px] md:h-auto md:w-[100px]' alt="" />
+        <animated.img style={fadeNavigation} src={logo} className=' w-[95px] h-[70px] md:h-auto md:w-[100px] md:py-2' alt="" />
       </Link>
-      <animated.div style={fadeNavigation} className='hidden xl:flex w-[35%]  justify-around'>
-        <div className="nav-item cursor-pointer text-center text-white text-lg font-medium">Home</div>
-        <div onClick={() => handleNavigateToSection(scrollRefs.aboutUs)} className="nav-item cursor-pointer text-center text-white text-lg font-medium font-lexend">About Us</div>
-        <div onClick={() => handleNavigateToSection(scrollRefs.services)} className="nav-item cursor-pointer text-center text-white text-lg font-medium font-lexend">Services</div>
-        <div onClick={() => handleNavigateToSection(scrollRefs.contact)} className="nav-item cursor-pointer text-center text-white text-lg font-medium font-lexend">Contact Us</div>
+      <animated.div style={fadeNavigation} className='hidden xl:flex w-[40%]  justify-around'>
+        <div className="nav-item cursor-pointer text-center text-black text-lg font-semibold font-raleway">Home</div>
+        <div onClick={() => handleNavigateToSection(scrollRefs.aboutUs)} className="nav-item cursor-pointer text-center text-black text-lg font-semibold font-raleway">About Us</div>
+        <div onClick={() => handleNavigateToSection(scrollRefs.services)} className="nav-item cursor-pointer text-center text-black text-lg font-semibold font-raleway">Services</div>
+        <div onClick={() => handleNavigateToSection(scrollRefs.contact)} className="nav-item cursor-pointer text-center text-black text-lg font-semibold font-raleway">Contact Us</div>
 
       </animated.div>
+<animated.div>
+<button  className='font-raleway text-lg leading-6 border-[#004BE0] xl:inline-flex item-right border-2 rounded-lg w-fit p-8 py-[10px] font-semibold cursor-pointer bg-transparent text-[#004BE0] hover:bg-[#004BE0] hover:text-white transition-colors duration-300'>
+      Let's Talk
+    </button>
+</animated.div>
+      
+
       <div className=" bg-neutral-100 flex gap-3 items-center  xl:hidden px-[18px]  h-[70px]">
         <div className="text-black text-lg font-semibold">Menu</div>
         <span onClick={handleFadeIn}><GiHamburgerMenu className=' text-black text-[25px]' /></span>
