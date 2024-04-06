@@ -94,13 +94,13 @@ export const Hero = ({ scrollRefs }) => {
           Hi,I am
         </animated.div>
         <animated.div
-          className="text-black xl:text-[58px] text-[30px] font-bold xl:leading-[50px] leading-[40px]"
+          className="text-black xl:text-[58px] text-[40px] font-bold xl:leading-[50px] leading-[45px]"
           style={fadeTitle}
         >
           Chamaththa Shamod
         </animated.div>
         <animated.div
-          className="text-black xl:text-[20px] text-[18px] md:font-semibold font-medium xl:leading-[10px] leading-[25px] xl:w-full w-[90%]"
+          className="text-black xl:text-[20px] text-[20px] md:font-semibold font-medium xl:leading-[10px] leading-[28px] xl:w-full w-[90%]"
           style={fadeTitle}
         >
           Passionate Software Engineer | Transforming Ideas into Code

@@ -78,9 +78,6 @@ export const Header = ({ scrollRefs }) => {
         <div onClick={() => handleNavigateToSection(scrollRefs.services)} className="nav-item cursor-pointer text-center text-black text-lg font-medium">Services</div>
         <div onClick={() => handleNavigateToSection(scrollRefs.contact)} className="nav-item cursor-pointer text-center text-black text-lg font-medium">Contact Us</div>
       </div>
-      <Link to="/schedule" className='md:hidden inline-flex px-4 py-2 bg-red-600 justify-center items-center  text-white text-md font-bold hover:bg-gradient-to-r hover:from-[#23216E] hover:via-[#830862] hover:to-red-400 '>
-        Schedule a call
-      </Link>
       <span className='xl:hidden' onClick={handleFadeIn}>
         <img src={menu} className=" w-[37px] border-4 border-[#F5F5F5] bg-[#F5F5F5] rounded-md bg-[F5F5F5]" alt="" />
         </span>

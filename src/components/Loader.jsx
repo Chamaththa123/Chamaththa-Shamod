@@ -16,7 +16,7 @@ export const Loader = () => {
     
         <img
           src={logo}
-          className=" md:w-[400px] w-[88px] loading-image "
+          className=" md:w-[400px] w-[208px] loading-image "
           alt=""
         />
     
