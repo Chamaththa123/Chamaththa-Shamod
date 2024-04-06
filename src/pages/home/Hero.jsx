@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSpring, animated, easings } from "react-spring";
 import { useInView } from "react-intersection-observer";
-import hero from './../../assets/images/hero.webp'
-
+import logo2 from "./../../assets/images/logo2.png";
 import { Link } from 'react-router-dom';
 
 export const Hero = ({ scrollRefs }) => {
@@ -11,12 +10,31 @@ export const Hero = ({ scrollRefs }) => {
     triggerOnce: true,
   });
 
+  const prevDelay = 200;
+
+  const fadeScreen = useSpring({
+    opacity: isVisible ? 1 : 0,
+
+    config: {
+      duration: 800,
+    },
+  });
+
+  const fadeSubTitle = useSpring({
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? "translateY(0)" : "translateY(25px)",
+    config: {
+      duration: 800,
+      delay: prevDelay,
+      easing: easings.easeInSine,
+    },
+  });
   const fadeTitle = useSpring({
     opacity: isVisible ? 1 : 0,
     transform: isVisible ? "translateY(0)" : "translateY(25px)",
     config: {
       duration: 800,
-      delay: 800,
+      delay: prevDelay + 100,
       easing: easings.easeInSine,
     },
   });
@@ -25,34 +43,23 @@ export const Hero = ({ scrollRefs }) => {
     transform: isVisible ? "translateY(0)" : "translateY(25px)",
     config: {
       duration: 800,
-      delay: 800,
+      delay: prevDelay + 200,
       easing: easings.easeInSine,
-
     },
   });
+
   const fadeLeft = useSpring({
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? "translateX(0)" : "translateX(-40%)",
-    config: {
-      duration: 800,
-      delay: 800,
-      easing: easings.easeInSine,
-
-    },
-  });
-  const fadeRight = useSpring({
     opacity: isVisible ? 1 : 0,
     transform: isVisible ? "translateX(0)" : "translateX(20%)",
     config: {
       duration: 800,
-      delay: 800,
+      delay: prevDelay,
       easing: easings.easeInSine,
-
     },
   });
 
   useEffect(() => {
-    const loaderDelay = 200;
+    const loaderDelay = 50;
 
     // Simulate loading delay with setTimeout
     setTimeout(() => {
@@ -61,30 +68,74 @@ export const Hero = ({ scrollRefs }) => {
       }
     }, loaderDelay);
   }, [inView]);
-
-
-  const handleNavigateToSection = (sectionRef) => {
-    sectionRef.current.scrollIntoView({ behavior: "smooth" });
- 
-};
   return (
-    <section className='overflow-hidden w-full xl:h-screen h-[80vh] relative flex items-center justify-center  font-press-start' ref={ref}>
-      <div className=' hero-overlay bg-gradient-to-t from-[#110F1B] to-[#00000052]'></div>
-      <img src={hero} className=' w-full xl:h-screen h-[80vh] object-cover' alt="" />
-      <div className=' absolute  w-full xl:h-screen h-[80vh] flex items-center flex-col justify-center gap-[30px]'>
-        <animated.div style={fadeTitle} className="text-white xl:text-[90px] text-center text-5xl xl:leading-[100px] leading-[60px]  font-bold pt-20 md:pt-0 ">
-          Discover Drive
-          <br />
-          <span className="text-rose-500  ">Worthy </span>
-          Deals
+    <animated.section
+      style={fadeScreen}
+      ref={ref}
+      className="overflow-hidden flex p-[30px] pt-[100px] xl:px-[0%] xl:pt-[4%] xl:flex-row flex-col gap-[0%] items-center w-full h-auto"
+    >
+      <div className=" xl:w-[50%] flex flex-col gap-1 xl:gap-10 items-start xl:pl-[5%]">
+        <div />
+
+        <animated.div
+          className=" xl:hidden rounded-[10px] w-full h-auto  overflow-hidden"
+          style={fadeSubTitle}
+        >
+          <img
+            src={logo2}
+            className="w-[100%]  xl:h-auto object-cover "
+            alt=""
+          />
         </animated.div>
-        <animated.div style={fadeDes} className="text-center text-white xl:text-3xl text-xl font-semibold leading-[45px]">
-          Dive into Exceptional Deals<br />on Pre-Owned Cars!
-          </animated.div>
-        <animated.button style={fadeDes}  onClick={() => handleNavigateToSection(scrollRefs.contact)} to="/" className='px-[25px] py-[15px] md:px-[20px] md:py-[10px] rounded-[10px] border-2 border-theme-color hover:bg-theme-color  text-white xl:text-xl text-base font-semibold'>
-          Let's Talk
-        </animated.button>
+        <animated.div
+          className="text-black xl:text-[26px] text-[20px] font-semibold xl:leading-[20px] leading-[50px]"
+          style={fadeTitle}
+        >
+          Hi,I am
+        </animated.div>
+        <animated.div
+          className="text-black xl:text-[58px] text-[30px] font-bold xl:leading-[50px] leading-[40px]"
+          style={fadeTitle}
+        >
+          Chamaththa Shamod
+        </animated.div>
+        <animated.div
+          className="text-black xl:text-[20px] text-[18px] md:font-semibold font-medium xl:leading-[10px] leading-[25px] xl:w-full w-[90%]"
+          style={fadeTitle}
+        >
+          Passionate Software Engineer | Transforming Ideas into Code
+        </animated.div>
+
+        <animated.div
+          style={fadeDes}
+          className=" text-black xl:text-lg text-[18px] font-normal md:mt-0 mt-7 leading-[25px] xl:leading-0 flex flex-col "
+        >
+          <p>
+            Welcome to my portfolio showcasing a journey fueled by passion,
+            dedication, and a relentless drive for learning and growth.
+          </p>
+        </animated.div>
+        <div className='flex gap-[20px] md:mt-[5%] mt-10'>
+      <Link to="/contact" 
+            className='px-[20px] py-[10px] rounded-[10px]   text-white xl:text-base text-base font-semibold' 
+            style={{backgroundImage: 'linear-gradient(to right, #3871c1, #3871c1, #3871c1)'}}>
+        Download CV
+      </Link>
+    </div>
       </div>
-    </section>
-  )
-}
+      <div className="relative hidden xl:flex xl:w-[50%] h-[100%] pt-10 flex-col gap-5  items-center justify-center ">
+        <animated.div
+          style={fadeLeft}
+          className=" rounded-[10px] max-w-[520px] xl:max-h-[680px]  overflow-hidden"
+        >
+          <div className=" absolute top-[100px] left-[-110px] -z-10"></div>
+          <img
+            src={logo2}
+            className="w-[100%]  xl:h-auto h-[356px] object-cover z-50"
+            alt=""
+          />
+        </animated.div>
+      </div>
+    </animated.section>
+  );
+};

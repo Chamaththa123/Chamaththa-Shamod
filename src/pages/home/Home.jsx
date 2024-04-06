@@ -45,14 +45,14 @@ export const Home = () => {
               scrollRefs={scrollRefs}
               
             />
-            {/* <Hero scrollRefs={scrollRefs} /> */}
+            <Hero scrollRefs={scrollRefs} />
             <AboutUs scrollref={scrollRefs.aboutUs} />
-            <Brands />
-            <Poster scrollRefs={scrollRefs} />
-            <Services scrollref={scrollRefs.services} />
-            <Gallery />
-            <Calender/>
-            <Contact scrollref={scrollRefs.contact} />
+            {/* <Brands /> */}
+            {/* <Poster scrollRefs={scrollRefs} /> */}
+            {/* <Services scrollref={scrollRefs.services} /> */}
+            {/* <Gallery /> */}
+            {/* <Calender/> */}
+            {/* <Contact scrollref={scrollRefs.contact} /> */}
             <Footer
               scrollRefs={scrollRefs}
            
