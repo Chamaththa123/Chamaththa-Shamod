@@ -18,7 +18,7 @@ body {
   left: 0;
   width: 100%;
   height: 2px; /* Set your preferred underline thickness */
-  background-color: #ff365a; /* Set your preferred underline color */
+  background-color: #3871c1  ; /* Set your preferred underline color */
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-in-out; /* Adjust the transition duration and timing function as needed */

@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
-
-import logo from './../../assets/images/logo.webp'
+import logo from './../../assets/images/logo.png'
+import menu from './../../assets/images/menu.png'
+// import { HeaderLink } from '../HeaderLink';
 import { headerItems } from '../../utils/dataArrays';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
-
 export const Header = ({ scrollRefs }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [ref, inView] = useInView({
@@ -65,35 +65,46 @@ export const Header = ({ scrollRefs }) => {
 
 
   return (
-    <animated.section ref={ref}  className=' fixed top-0 md:relative w-full z-50 h-auto bg-black font-press-start flex items-center justify-between xl:justify-start p-0 xl:py-[5px] xl:px-[40px]'>
-      <Link className='xl:w-[35%]' to="/">
-        <animated.img style={fadeNavigation} src={logo} className=' w-[95px] h-[70px] md:h-auto md:w-[100px]' alt="" />
+    <animated.section
+      ref={ref}
+      style={fadeNavigation}
+      className='fixed w-full inset-0 top-0 left-0 bottom-0 z-50  h-[92px] bg-white font-press-start flex items-center justify-between p-[15px] mb-40px xl:py-[10px] xl:px-[40px] shadow-sm'>
+      <Link to="/">
+        <img src={logo} className='w-[120px] md:w-[150px]' alt="" />
       </Link>
-      <animated.div style={fadeNavigation} className='hidden xl:flex w-[35%]  justify-around'>
-        <div className="nav-item cursor-pointer text-center text-white text-lg font-medium">Home</div>
-        <div onClick={() => handleNavigateToSection(scrollRefs.aboutUs)} className="nav-item cursor-pointer text-center text-white text-lg font-medium">About Us</div>
-        <div onClick={() => handleNavigateToSection(scrollRefs.services)} className="nav-item cursor-pointer text-center text-white text-lg font-medium">Services</div>
-        <div onClick={() => handleNavigateToSection(scrollRefs.contact)} className="nav-item cursor-pointer text-center text-white text-lg font-medium">Contact Us</div>
-
-      </animated.div>
-      <div className=" bg-neutral-100 flex gap-3 items-center  xl:hidden px-[18px]  h-[70px]">
-        <div className="text-black text-lg font-semibold">Menu</div>
-        <span onClick={handleFadeIn}><GiHamburgerMenu className=' text-black text-[25px]' /></span>
+      <div className='hidden xl:flex w-[40%]  justify-around'>
+      <div className="nav-item cursor-pointer text-center text-black text-lg font-medium">Home</div>
+        <div onClick={() => handleNavigateToSection(scrollRefs.aboutUs)} className="nav-item cursor-pointer text-center text-black text-lg font-medium">About Us</div>
+        <div onClick={() => handleNavigateToSection(scrollRefs.services)} className="nav-item cursor-pointer text-center text-black text-lg font-medium">Services</div>
+        <div onClick={() => handleNavigateToSection(scrollRefs.contact)} className="nav-item cursor-pointer text-center text-black text-lg font-medium">Contact Us</div>
       </div>
-
-
-      <div className={`fixed w-full z-50 inset-0 top-0 left-0 bottom-0 bg-white h-[100vh] p-[20px] transition transform duration-500 ease-in-out fade-up-enter-active ${visibleMObile ? "fade-up-enter-to" : "fade-up-enter-from "
+      <Link to="/schedule" className='md:hidden inline-flex px-4 py-2 bg-red-600 justify-center items-center  text-white text-md font-bold hover:bg-gradient-to-r hover:from-[#23216E] hover:via-[#830862] hover:to-red-400 '>
+        Schedule a call
+      </Link>
+      <span className='xl:hidden' onClick={handleFadeIn}>
+        <img src={menu} className=" w-[37px] border-4 border-[#F5F5F5] bg-[#F5F5F5] rounded-md bg-[F5F5F5]" alt="" />
+        </span>
+      {/* <Link to="/schedule" className='hidden xl:inline-flex px-10 py-3 bg-[#f68712] rounded-lg justify-center items-center gap-2.5  text-white text-lg font-bold hover:bg-gradient-to-r hover:from-[#3632a8] hover:via-[#3871c1] hover:to-[#00adef] '>
+        Let's Talk
+      </Link> */}
+      <div className={`fixed w-full inset-0 top-0 left-0 bottom-0 bg-white h-[100vh] p-[20px] transition transform duration-500 ease-in-out fade-up-enter-active ${visibleMObile ? "fade-up-enter-to" : "fade-up-enter-from "
         } `} >
         <div className="flex items-center justify-between w-full">
           <Link className="">
-            <img src={logo} className=" w-[150px]  " alt="" />
+            <img src={logo} className=" w-[150px]" alt="" />
           </Link>
-          <span onClick={handleFadeIn}  >
-            <IoMdClose className=' text-[20px]' />
+      
+          <span onClick={handleFadeIn}>
+            <IoMdClose className='text-[20px]' />
           </span>
         </div>
         {/* mobile header  */}
-        
+        <div className="w-full flex mt-[80px] flex-col gap-3">
+        <div className="nav-item cursor-pointer text-left text-black text-lg font-medium">Home</div>
+        <div onClick={() => handleNavigateToSectionMobile(scrollRefs.aboutUs)} className="nav-item cursor-pointer text-left text-black text-lg font-medium">About Us</div>
+        <div onClick={() => handleNavigateToSectionMobile(scrollRefs.services)} className="nav-item cursor-pointer text-left text-black text-lg font-medium">Services</div>
+        <div onClick={() => handleNavigateToSectionMobile(scrollRefs.contact)} className="nav-item cursor-pointer text-left text-black text-lg font-medium">Contact Us</div>
+        </div>
       </div>
     </animated.section>
   )

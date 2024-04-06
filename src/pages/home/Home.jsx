@@ -45,7 +45,7 @@ export const Home = () => {
               scrollRefs={scrollRefs}
               
             />
-            <Hero scrollRefs={scrollRefs} />
+            {/* <Hero scrollRefs={scrollRefs} /> */}
             <AboutUs scrollref={scrollRefs.aboutUs} />
             <Brands />
             <Poster scrollRefs={scrollRefs} />
