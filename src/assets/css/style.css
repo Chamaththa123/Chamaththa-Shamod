@@ -1,0 +1,80 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  @apply font-inter overflow-x-hidden;
+}
+.nav-item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add the animated underline on hover */
+.nav-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Set your preferred underline thickness */
+  background-color: #ff365a; /* Set your preferred underline color */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out; /* Adjust the transition duration and timing function as needed */
+}
+
+.nav-item:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.fade-up-enter-active {
+  transition: opacity 0.5s, transform 0.8s;
+}
+
+.fade-up-enter-active-large {
+  transition: opacity 0.5s, transform 0.8s;
+}
+
+.fade-up-enter-from {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.fade-up-enter-to {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero-overlay {
+  @apply absolute top-0 left-0 w-full h-[80vh] xl:h-[100vh];
+}
+
+.techSwiper {
+  @apply h-[100%] w-full;
+}
+
+.techSwiper .swiper-wrapper {
+  padding-bottom: 10px;
+  padding-top: 25px;
+}
+
+
+.contact-input {
+  border: none;
+  background-color: #F3F3F3 ;
+  border-bottom: 3px solid #2e02494d; /* Set the color of the bottom border */
+  outline: none;
+}
+.contact-input:focus {
+  border-bottom: 3px solid #000; /* Set the color of the bottom border */
+}
+
+.contact-input::placeholder {
+  color: #2e02494d; /* Set the default placeholder color */
+}
+
+.contact-input:focus::placeholder {
+  color: #000000; /* Change the color to your desired focus placeholder color */
+}
