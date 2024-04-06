@@ -100,7 +100,7 @@ export const Hero = ({ scrollRefs }) => {
           Chamaththa Shamod
         </animated.div>
         <animated.div
-          className="text-black xl:text-[20px] text-[20px] md:font-semibold font-medium xl:leading-[10px] leading-[28px] xl:w-full w-[90%]"
+          className="text-black xl:text-[20px] text-[20px] md:font-semibold font-medium xl:leading-[10px] leading-[28px] xl:w-full w-[100%]"
           style={fadeTitle}
         >
           Passionate Software Engineer | Transforming Ideas into Code
