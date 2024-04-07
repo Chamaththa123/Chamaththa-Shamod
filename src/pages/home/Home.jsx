@@ -52,7 +52,7 @@ export const Home = () => {
             {/* <Services scrollref={scrollRefs.services} /> */}
             {/* <Gallery /> */}
             {/* <Calender/> */}
-            {/* <Contact scrollref={scrollRefs.contact} /> */}
+            <Contact scrollref={scrollRefs.contact} />
             <Footer
               scrollRefs={scrollRefs}
            
