@@ -124,8 +124,8 @@ export const Footer = ({ scrollRefs}) => {
             </div>
         </div>
       </div>
-      <div className="flex w-full bg-[#3062a8] md:text-base md:leading-[20px] justify-center md:py-[0.8%]">
-        <div className='text-white text-base leading-[23px] flex flex-col md:flex-row gap-1 items-center'>
+      <div className="flex w-full bg-[#3062a8] md:text-sm md:leading-[20px] justify-center md:py-[0.8%]">
+        <div className='text-white text-sm leading-[23px] flex flex-col md:flex-row gap-1 items-center'>
           <span>© 2024 - All Rights Reserved.</span>
           <span className="hidden md:block">|</span>
 
