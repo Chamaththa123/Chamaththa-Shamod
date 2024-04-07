@@ -53,10 +53,10 @@ export const Home = () => {
             {/* <Gallery /> */}
             {/* <Calender/> */}
             {/* <Contact scrollref={scrollRefs.contact} /> */}
-            <Footer
+            {/* <Footer
               scrollRefs={scrollRefs}
            
-            />
+            /> */}
           </>)
       }
     </>
