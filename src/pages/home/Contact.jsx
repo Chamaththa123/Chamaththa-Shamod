@@ -75,17 +75,17 @@ export const Contact = ({ scrollref }) => {
 				GET IN TOUCH 
                 </animated.div>
 
-				<animated.div style={fadeTitle} className="text-black w-full xl:text-lg text-2xl md:w-[60%] font-normal xl:leading-[30px] leading-[50px] relative">
+				<animated.div style={fadeTitle} className="text-black w-full xl:text-lg text-[18px] md:w-[60%] font-normal xl:leading-[30px] leading-[30px] relative">
 				Thank you for taking the time to explore my portfolio. I'm always open to new opportunities, collaborations, and discussions. If you have any inquiries, feedback, or just want to connect, feel free to reach out to me.
                 </animated.div>
 
                 <div className='w-full flex flex-col md:flex-row justify-between md:mt-8'>
-				<animated.div style={fadeRight} className='w-[50%]'>
+				<animated.div style={fadeRight} className='md:w-[50%] w-full'>
        <InlineWidget url="https://calendly.com/shamodchamaththa/30min" styles={{overflow:'-moz-hidden-unscrollable',height:'870px'}}/>
     </animated.div>
 
 
-                    <div className="flex flex-col items-center">ebeberegregerg</div>
+                    <div className="flex flex-col md:items-center">ebeberegregerg</div>
                 </div>
 				
 
