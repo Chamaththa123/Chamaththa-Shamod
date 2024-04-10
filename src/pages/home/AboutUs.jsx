@@ -91,7 +91,7 @@ export const AboutUs = ({ scrollref }) => {
       <div className=" xl:w-[50%] flex flex-col gap-7 xl:gap-1 items-start">
         <div ref={scrollref} />
         <animated.div
-          className="text-center text-[#40b93c] text-4xl font-medium xl:leading-[60px]"
+          className="text-center text-[#046fbb] text-4xl font-medium xl:leading-[60px]"
           style={fadeSubTitle}
         >
           About Me
@@ -112,7 +112,7 @@ export const AboutUs = ({ scrollref }) => {
 
         <animated.div
           style={fadeDes}
-          className=" text-black text-lg font-normal leading-[30px] xl:leading-10 flex flex-col gap-5"
+          className=" text-[#051B5A] text-lg font-normal leading-[30px] xl:leading-10 flex flex-col gap-5"
         >
           <p>
             {" "}

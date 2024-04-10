@@ -70,7 +70,7 @@ export const Header = ({ scrollRefs }) => {
       style={fadeNavigation}
       className='fixed w-full inset-0 top-0 left-0 bottom-0 z-50  h-[92px] bg-white font-press-start flex items-center justify-between p-[15px] mb-40px xl:py-[10px] xl:px-[40px] shadow-sm'>
       <Link to="/">
-        <img src={logo} className='w-[120px] md:w-[150px]' alt="" />
+        <img src={logo} className='w-[120px] md:w-[145px]' alt="" />
       </Link>
       <div className='hidden xl:flex w-[40%]  justify-around'>
       <div className="nav-item cursor-pointer text-center text-black text-lg font-medium">Home</div>

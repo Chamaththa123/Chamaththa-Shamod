@@ -88,19 +88,19 @@ export const Hero = ({ scrollRefs }) => {
           />
         </animated.div>
         <animated.div
-          className="text-black xl:text-[26px] text-[20px] font-semibold xl:leading-[20px] leading-[50px]"
+          className="text-[#051B5A] xl:text-[26px] text-[20px] font-semibold xl:leading-[20px] leading-[50px]"
           style={fadeTitle}
         >
           Hi,I am
         </animated.div>
         <animated.div
-          className="text-black xl:text-[58px] text-[40px] font-bold xl:leading-[50px] leading-[45px]"
+        className="text-[#051B5A] xl:text-[58px] text-[40px] font-bold xl:leading-[50px] leading-[45px]"
           style={fadeTitle}
         >
           Chamaththa Shamod
         </animated.div>
         <animated.div
-          className="text-black xl:text-[20px] text-[20px] md:font-semibold font-medium xl:leading-[10px] leading-[28px] xl:w-full w-[100%]"
+          className="text-[#051B5A] xl:text-[20px] text-[20px] md:font-semibold font-medium xl:leading-[10px] leading-[28px] xl:w-full w-[100%]"
           style={fadeTitle}
         >
           Passionate Software Engineer | Transforming Ideas into Code
@@ -108,7 +108,7 @@ export const Hero = ({ scrollRefs }) => {
 
         <animated.div
           style={fadeDes}
-          className=" text-black xl:text-lg text-[18px] font-normal md:mt-0 mt-7 leading-[25px] xl:leading-0 flex flex-col "
+          className=" text-[#051B5A] xl:text-lg text-[18px] font-normal md:mt-0 mt-7 leading-[25px] xl:leading-0 flex flex-col "
         >
           <p>
             Welcome to my portfolio showcasing a journey fueled by passion,
@@ -117,9 +117,11 @@ export const Hero = ({ scrollRefs }) => {
         </animated.div>
         <div className='flex gap-[20px] md:mt-[5%] mt-10'>
       <Link to="/contact" 
-            className='px-[20px] py-[10px] rounded-[10px]   text-white xl:text-base text-base font-semibold' 
-            style={{backgroundImage: 'linear-gradient(to right, #3871c1, #3871c1, #3871c1)'}}>
-        Download CV
+            className='fancy'> 
+            <span class="top-key"></span>
+            <span class="text">Download CV</span>
+            <span class="bottom-key-1"></span>
+            <span class="bottom-key-2"></span>
       </Link>
     </div>
       </div>
