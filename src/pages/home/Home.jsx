@@ -11,6 +11,7 @@ import { Loader } from "../../components/Loader";
 import NavigationContext from "../../contexts/NavigationContext";
 import { Poster } from "./Poster";
 import { Calender } from "./Calender";
+import { Blog } from "./Blog";
 
 
 export const Home = () => {
@@ -49,6 +50,7 @@ export const Home = () => {
             <AboutUs scrollref={scrollRefs.aboutUs} />
             {/* <Brands /> */}
             {/* <Poster scrollRefs={scrollRefs} /> */}
+            <Blog/>
             {/* <Services scrollref={scrollRefs.services} /> */}
             {/* <Gallery /> */}
             {/* <Calender/> */}

@@ -12,42 +12,58 @@ import galleryTwo from "./../assets/images/gallery/gallery-2.jpg";
 import galleryThree from "./../assets/images/gallery/gallery-3.jpg";
 import galleryFour from "./../assets/images/gallery/gallery-4.jpg";
 
+import blogOne from "./../assets/images/blog/blog1.jpeg";
+import blogTwo from "./../assets/images/blog/blog2.jpeg";
+import blogThree from "./../assets/images/blog/blog3.png";
+import blogFour from "./../assets/images/blog/blog4.jpeg";
 
 export const footerServices = [
   {
-    title : "All Mechanical"
+    title: "All Mechanical",
   },
   {
-    title : "Repairs"
+    title: "Repairs",
   },
   {
-    title : "Log Book Services"
+    title: "Log Book Services",
   },
   {
-    title : "Panel Beating"
+    title: "Panel Beating",
   },
   {
-    title : "Vehicle Wrecking"
+    title: "Vehicle Wrecking",
   },
   {
-    title : "Spray Painting"
+    title: "Spray Painting",
   },
   {
-    title : "Cutting and Polishing"
+    title: "Cutting and Polishing",
   },
   {
-    title : "Free Quotes"
+    title: "Free Quotes",
   },
   {
-    title : "Tire Services"
+    title: "Tire Services",
   },
-]
+];
 export const galleryItem = [
   { img: galleryOne },
   { img: galleryTwo },
   { img: galleryThree },
   { img: galleryFour },
 ];
+
+export const blogItem = [
+  { img: blogOne,
+  title:"Best Practices in Front-end Development (React)" },
+  { img: blogTwo ,
+    title:"Demystifying Version Control: A Comprehensive Guide to Git for Beginners"},
+  { img: blogThree,
+    title:"Diving into SQL vs NoSQL: Understanding the Essentials of Modern Database ..." },
+  { img: blogFour ,
+    title:"Elevating Software Development: Design Patterns, Coding Conventions, and Best..."},
+];
+
 export const brands = [
   { img: bmw },
   { img: honda },
