@@ -72,7 +72,7 @@ export const Hero = ({ scrollRefs }) => {
     <animated.section
       style={fadeScreen}
       ref={ref}
-      className="overflow-hidden flex p-[30px] pt-[100px] xl:px-[0%] xl:pt-[4%] xl:flex-row flex-col gap-[0%] items-center w-full h-auto"
+      className="overflow-hidden flex p-[30px] pt-[100px] xl:px-[0%] xl:pt-[4%] xl:flex-row bg-[#F1F5FF] flex-col gap-[0%] items-center w-full h-auto"
     >
       <div className=" xl:w-[50%] flex flex-col gap-1 xl:gap-10 items-start xl:pl-[5%]">
         <div />
