@@ -104,17 +104,17 @@ export const Contact = ({ scrollref }) => {
 
           <div className="flex flex-col md:ml-[13%]">
             <div>
-              <div className=" flex flex-row mb-4">
+              <div className=" flex md:flex-row flex-col md:mb-4">
                 <span>
                   <img src={email} alt="email" className="w-14" />
                 </span>{" "}
-                <span className="mt-4 ml-4 text-lg">shamodchamaththa@gmail.com</span>
+                <span className="md:mt-4 md:ml-4 text-lg">shamodchamaththa@gmail.com</span>
               </div>
-              <div className=" flex flex-row mb-4 ">
+              <div className=" flex md:flex-row flex-col mb-4 ">
                 <span>
                   <img src={call} alt="email" className="w-14" />
                 </span>{" "}
-                <span className="mt-4 ml-4 text-lg">070 3826 675 / 074 1308 202</span>
+                <span className="md:mt-4 md:ml-4 text-lg">070 3826 675 / 074 1308 202</span>
               </div>
             </div>
             <div className=" flex flex-row  gap-10 ">
