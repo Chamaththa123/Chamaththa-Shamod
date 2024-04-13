@@ -67,17 +67,17 @@ export const Blog = ({ scrollref }) => {
 
   return (
     <animated.section
-      className="overflow-hidden flex p-[30px] py-[60px] xl:px-[5%] xl:py-[4%] flex-col md:gap-20  w-full h-auto relative"
+      className="overflow-hidden flex p-[30px] py-[60px] xl:px-[5%] xl:py-[4%] flex-col md:gap-10 justify-center items-center w-full h-auto relative"
       style={fadeScreen}
       ref={ref}
     >
-      <animated.div className="text-left text-[#046fbb] text-4xl font-medium ">
+      <animated.div className="text-left text-[#046fbb] text-2xl font-medium ">
         My Tech Articles{" "}
       </animated.div>
 
       <animated.div
         style={fadeLeft}
-        className=" flex md:w-[100%] w-full justify-center items-center"
+        className=" md:flex md:w-[100%] w-full justify-center items-center  hidden"
       >
         <Swiper
           slidesPerView={5}
@@ -97,7 +97,50 @@ export const Blog = ({ scrollref }) => {
                 key={itemIndex}
                 className="flex items-center justify-center"
               >
-                <div className="w-[90%] bg-white rounded-lg shadow-lg">
+                <div className="w-[90%] bg-white rounded-lg shadow-md">
+                  <img
+                    src={item.img}
+                    className="w-[100%] h-[200px]  mb-1 rounded-lg"
+                    alt={item.name}
+                  />
+                  <div className="p-2">
+                    <p className="text-left font-semibold mb-3 text-[#051B5A]">
+                      {item.title}
+                    </p>
+                    <a className="p-1 px-2 bg-[#051B5A] text-white text-sm rounded-sm ">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </animated.div>
+
+      <animated.div
+        style={fadeLeft}
+        className=" flex md:w-[100%] w-full justify-center items-center  md:hidden"
+      >
+        <Swiper
+          slidesPerView={1}
+          loop={true}
+          autoplay={true}
+          breakpoints={{
+            768: {
+              slidesPerView: 1,
+            },
+          }}
+          modules={[Autoplay, EffectFade, Navigation, Pagination]}
+          className="techSwiper "
+        >
+          {blogItem.slice(0, 5).map((item, itemIndex) => {
+            return (
+              <SwiperSlide
+                key={itemIndex}
+                className="flex items-center justify-center"
+              >
+                <div className="w-[90%] bg-white rounded-lg shadow-md">
                   <img
                     src={item.img}
                     className="w-[100%] h-[200px]  mb-1 rounded-lg"
